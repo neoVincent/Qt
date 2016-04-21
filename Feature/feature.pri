@@ -9,13 +9,11 @@ defineTest(copyLibrary) {
     else:unix { library = library$${library}.so }
     else {library = library$${library}.$${QMAKE_EXTENSION_SHLIB}}
 
-    path = $$folder/$$libaray
+    path = $$folder/$$library
 
 
     QMAKE_POST_LINK += $(COPY_FILE) \
                     $$system_quote($$shell_path($$path)) \
                     $$system_quote($$shell_path($$destination)) $$escape_expand(\\n\\t)
-
     export(QMAKE_POST_LINK)
-
 }

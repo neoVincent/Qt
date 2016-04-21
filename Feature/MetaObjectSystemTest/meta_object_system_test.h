@@ -12,7 +12,9 @@ class MetaObjectSystemTest : public QObject
     Q_OBJECT
 
 private Q_SLOTS:
-
+    void initTestCast();
+    void customeClassTest();
+    void cleanupTestCase();
 };
 
 

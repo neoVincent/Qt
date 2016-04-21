@@ -11,9 +11,9 @@ CONFIG(debug, debug|release) {
 
 DESTDIR = $$PACKAGE_DESTIR/MetaObjectSystemTest
 
-QMAKE_LIBDIR += $$PACKAGE_DESTIRE/MetaObjectSystem
+QMAKE_LIBDIR += $$PACKAGE_DESTIR/MetaObjectSystem
 
-INCLUDEPATH += $$PWD/../MetaObject/
+INCLUDEPATH += $$PWD/../MetaObjectSystem/
 
 include($$PWD/../feature.pri)
 

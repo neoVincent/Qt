@@ -32,7 +32,7 @@ QVariant TypeTransformer::fromJson(QJsonObject jsonObject, QVariant defaultVal)
     return QVariant();
 }
 
-QJsonValue TypeTransformer::toJson(QVariant& variant)
+QJsonValue TypeTransformer::toJson(QVariant variant)
 {
     switch (variant.type())
     {
@@ -65,7 +65,7 @@ QJsonValue TypeTransformer::toJson(QVariant& variant)
 
 QJsonArray TypeTransformer::toJson(QVariantList& variantList)
 {
-    return QJsonArray{};
+    return QJsonArray();
 }
 
 /**

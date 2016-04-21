@@ -29,7 +29,7 @@ public:
 
     QVariant fromJson(QJsonObject jsonObject, QVariant defaultVal);
 
-    QJsonValue toJson(QVariant& variant);
+    QJsonValue toJson(QVariant variant);
 
     QJsonArray toJson(QVariantList& variantList);
 

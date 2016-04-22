@@ -6,6 +6,8 @@ TARGET = MetaObjectSystem
 
 TEMPLATE = lib
 
+CONFIG += c++11
+
 DEFINES += METAOBJECT_SYSTEM_LIBRARY
 
 SOURCES += type_transformer.cpp

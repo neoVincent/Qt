@@ -23,9 +23,9 @@ public:
     explicit TypeTransformer(QObject* parent = 0);
     virtual ~TypeTransformer();
 
-    QVariant fromJson(QJsonValue jsonObject, QVariant defaultVal);
+    QVariant fromJson(QJsonValue jsonValue, QVariant defaultVal);
 
-    QVariant fromJson(QJsonArray jsonObject, QVariant defaultVal);
+    QVariant fromJson(QJsonArray jsonArray, QVariant defaultVal);
 
     QVariant fromJson(QJsonObject jsonObject, QVariant defaultVal);
 
@@ -34,6 +34,10 @@ public:
     QJsonArray toJson(QVariantList& variantList);
 
     QJsonValue toJson(const QMetaObject* metaObject, QVariant& gadgetVal);
+
+private:
+
+    bool supportedType(QVariant var);
 };
 
 } // metasystem

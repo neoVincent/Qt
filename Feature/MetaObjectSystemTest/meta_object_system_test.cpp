@@ -17,9 +17,14 @@ void MetaObjectSystemTest::initTestCast()
 void MetaObjectSystemTest::customeClassTest()
 {
     TypeTransformer transformer;
-    CustomClass myClass{23,"abc"};
-    QJsonValue jsonObject = transformer.toJson(QVariant::fromValue(myClass));
+    CustomClass expectedClass{23,"abc"};
+    QJsonValue jsonObject = transformer.toJson(QVariant::fromValue(expectedClass));
     qDebug() << jsonObject;
+
+    QVariant var = transformer.fromJson(jsonObject, QVariant::fromValue(CustomClass{0,""}));
+    CustomClass actualClass = var.value<CustomClass>();
+
+    QCOMPARE(expectedClass,actualClass);
 }
 
 void MetaObjectSystemTest::cleanupTestCase()

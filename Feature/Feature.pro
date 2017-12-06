@@ -2,6 +2,9 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     MetaObjectSystem \
-    MetaObjectSystemTest
+    MetaObjectSystemTest \
+    MetaTypeRegister \
+    MetaTypeRegisterTest
 
 MetaObjectSystemTest.depend = MetaObjectSystem
+MetaTypeRegisterTest.depend = MetaTypeRegister
